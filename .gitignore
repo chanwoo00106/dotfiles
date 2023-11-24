@@ -1,0 +1,16 @@
+*
+
+!.gitignore
+!.zshrc
+!.bashrc
+!.bash_profile
+
+!.config/
+
+!.config/nvim/
+!.config/nvim/**
+
+!.config/wezterm/
+!.config/wezterm/**
+
+.DS_Store
