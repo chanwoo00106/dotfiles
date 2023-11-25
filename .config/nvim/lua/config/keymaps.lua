@@ -4,6 +4,7 @@ local map = Util.safe_keymap_set
 
 map("i", "jk", "<ESC>")
 
+map("i", "<C-z>", "")
 map("n", "<C-z>", ":undo<CR>")
 map("n", "<C-r>", ":redo<CR>")
 
@@ -19,3 +20,9 @@ map("v", "{", "s{}<ESC>P")
 map("v", "(", "s()<ESC>P")
 map("v", "[", "s[]<ESC>P")
 map("v", "<C-w>", "s<></><ESC>hhi<ENTER><ESC>kpI<TAB><ESC>ki")
+
+map("n", "t", function()
+  require("neo-tree.command").execute({ toggle = true, dir = Util.root() })
+end, {
+  desc = "Explorer NeoTree (root dir)",
+})
