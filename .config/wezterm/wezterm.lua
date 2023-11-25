@@ -1,4 +1,3 @@
-local wezterm = require("wezterm")
 local helpers = require("helpers")
 
 local config = {}
