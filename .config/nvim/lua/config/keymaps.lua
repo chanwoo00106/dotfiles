@@ -1,4 +1,5 @@
 local Util = require("lazyvim.util")
+local support = require("config.support")
 
 local map = Util.safe_keymap_set
 
@@ -26,3 +27,6 @@ map("n", "t", function()
 end, {
   desc = "Explorer NeoTree (root dir)",
 })
+
+map("n", "F", support.diagnostic_goto(true), { desc = "Next Diagnostic", noremap = true, silent = true })
+map("n", "E", support.diagnostic_goto(true, "ERROR"), { desc = "Next Diagnostic", noremap = true, silent = true })

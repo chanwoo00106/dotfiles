@@ -1,17 +1,4 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
-
-function Mysplit(inputstr, sep)
-  if sep == nil then
-    sep = "%s"
-  end
-  local t = {}
-  for str in string.gmatch(inputstr, "([^" .. sep .. "]+)") do
-    table.insert(t, str)
-  end
-  return t
-end
+local support = require("config.support")
 
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
@@ -45,5 +32,5 @@ vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.opt.relativenumber = false
 
-local folderList = Mysplit(vim.fn.getcwd(), "/")
+local folderList = support.Mysplit(vim.fn.getcwd(), "/")
 vim.opt.titlestring = folderList[#folderList]
