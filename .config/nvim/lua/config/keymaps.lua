@@ -8,6 +8,7 @@ map("i", "jk", "<ESC>")
 map("i", "<C-z>", "")
 map("n", "<C-z>", ":undo<CR>")
 map("n", "<C-r>", ":redo<CR>")
+map("v", "<C-z>", "")
 
 map("n", "ss", ":split<CR><C-w>w", { silent = true })
 map("n", "sv", ":vsplit<CR><C-w>w", { silent = true })

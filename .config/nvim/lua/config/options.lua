@@ -31,6 +31,7 @@ vim.opt.wildignore:append({ "*/node_modules/*" })
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.opt.relativenumber = false
+vim.opt.swapfile = false
 
 local folderList = support.Mysplit(vim.fn.getcwd(), "/")
 vim.opt.titlestring = folderList[#folderList]
