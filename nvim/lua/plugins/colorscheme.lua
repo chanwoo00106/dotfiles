@@ -3,7 +3,13 @@ return {
   config = function()
     local colorizer = require("colorizer")
     colorizer.setup({
-      "*",
+      "css",
+      "javascript",
+      "lua",
+      "vim",
+      "toml",
+      "svelte",
+      "typescript",
     }, {
       RGB = true,
       RRGGBB = true,
