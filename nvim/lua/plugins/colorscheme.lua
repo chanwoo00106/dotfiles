@@ -10,6 +10,8 @@ return {
       "toml",
       "svelte",
       "typescript",
+      "typescriptreact",
+      "javascriptreact",
     }, {
       RGB = true,
       RRGGBB = true,
