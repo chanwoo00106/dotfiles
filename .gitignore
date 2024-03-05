@@ -1,13 +1,13 @@
 *
 
-.DS_Store
+**/.DS_Store
 
 !wezterm
-!wezterm/*
+!wezterm/**
 !nvim
-!nvim/*
+!nvim/**
 !fish
-!fish/*
+!fish/**
 
 fish/functions
 fish/fish_plguins
