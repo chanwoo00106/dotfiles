@@ -1,6 +1,13 @@
 return {
   { "mg979/vim-visual-multi" },
   {
+    "nvim-neo-tree/neo-tree.nvim",
+    keys = {
+      { "<leader>e", vim.NIL },
+      { "<leader>E", vim.NIL },
+    },
+  },
+  {
     "akinsho/toggleterm.nvim",
     keys = {
       { "<C-t>", "<cmd>ToggleTerm<CR>", desc = "toggle terminal" },
@@ -56,5 +63,11 @@ return {
         vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx, config)
       end
     end,
+  },
+  {
+    "folke/twilight.nvim",
+    keys = {
+      { "<leader>et", "<cmd>Twilight<CR>", desc = "toggle twilight" },
+    },
   },
 }
