@@ -14,7 +14,7 @@ return {
         hide_numbers = true,
         shade_filetypes = {},
         shade_terminals = true,
-        terminal_mappingsj = true,
+        terminal_mappings = true,
         shading_factor = 2,
         start_in_insert = true,
         insert_mappings = true,
@@ -22,7 +22,7 @@ return {
         direction = "horizontal",
         close_on_exit = true,
         auto_scroll = true,
-        shell = vim.o.shell,
+        shell = "fish",
       })
 
       function _G.set_terminal_keymaps()
@@ -46,6 +46,15 @@ return {
     version = "2.*",
     config = function()
       require("window-picker").setup()
+    end,
+  },
+  {
+    "dmmulroy/ts-error-translator.nvim",
+    config = function()
+      vim.lsp.handlers["textDocument/publishDiagnostics"] = function(err, result, ctx, config)
+        require("ts-error-translator").translate_diagnostics(err, result, ctx, config)
+        vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx, config)
+      end
     end,
   },
 }
