@@ -45,6 +45,9 @@ return {
         lua_ls = {
           single_file_support = true,
         },
+        jsonls = {
+          single_file_support = true,
+        },
       },
     },
   },

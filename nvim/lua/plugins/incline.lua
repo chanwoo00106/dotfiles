@@ -28,7 +28,7 @@ return {
       end
 
       local function get_diagnostic_label()
-        local icons = { error = " ", warn = " ", info = " ", hint = " " }
+        local icons = { error = " ", warn = " ", info = " ", hint = " " }
         local label = {}
 
         for severity, icon in pairs(icons) do
@@ -47,8 +47,7 @@ return {
         { get_diagnostic_label() },
         { get_git_diff() },
         { (ft_icon or "") .. " ", guifg = ft_color, guibg = "none" },
-        { filename .. " ", gui = vim.bo[props.buf].modified and "bold,italic" or "bold" },
-        { "┊  " .. vim.api.nvim_win_get_number(props.win), group = "DevIconWindows" },
+        { filename, gui = vim.bo[props.buf].modified and "bold,italic" or "bold" },
       }
     end,
   },
