@@ -3,6 +3,12 @@ function vi
     nvim $argv
 end
 
+function ls
+    eza --icons=always $argv
+end
+
+alias sd "cd ~ && cd (find * -type d | fzf)"
+
 # nvm setup
 function __check_nvm --on-variable PWD --description 'Do nvm stuff'
     if test -f .nvmrc

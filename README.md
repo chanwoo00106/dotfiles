@@ -9,3 +9,5 @@ chanwoo's dotfiles
 - Wezterm
 - Nerd Font
 - fish
+- fzf
+- eza
