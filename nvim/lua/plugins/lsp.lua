@@ -48,6 +48,8 @@ return {
         jsonls = {
           single_file_support = true,
         },
+        prismals = {},
+        dockerls = {},
       },
     },
   },
