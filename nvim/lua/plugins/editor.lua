@@ -1,13 +1,6 @@
 return {
   { "mg979/vim-visual-multi" },
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    keys = {
-      { "<leader>e", vim.NIL },
-      { "<leader>E", vim.NIL },
-    },
-  },
-  {
     "akinsho/toggleterm.nvim",
     keys = {
       { "<C-t>", "<cmd>ToggleTerm<CR>", desc = "toggle terminal" },
