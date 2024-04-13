@@ -9,3 +9,5 @@
 !fish/config.fish
 !yabai
 !yabai/**
+!tmux
+!tmux/**
