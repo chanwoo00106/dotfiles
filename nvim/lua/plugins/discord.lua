@@ -1,23 +1,57 @@
 return {
-  "andweeb/presence.nvim",
-  opts = {
-    auto_update = true,
-    neovim_image_text = "Best editor in the world",
-    main_image = "neovim",
-    client_id = "793271441293967371",
-    log_level = nil,
-    debounce_timeout = 10,
-    enable_line_number = false,
-    blacklist = {},
-    buttons = true,
-    file_assets = {},
-    show_time = true,
-    editing_text = "vim과 함께 코딩중...",
-    file_explorer_text = "vim과 함께 파일 탐색중...",
-    git_commit_text = "Committing changes",
-    plugin_manager_text = "Managing plugins",
-    reading_text = "vim과 함께 글 읽는 중...",
-    workspace_text = "Secret Project",
-    line_number_text = "vim과 함께 중요한 부분 보는중...",
+  {
+    "vyfor/cord.nvim",
+    build = "./build",
+    event = "VeryLazy",
+    opts = {
+      usercmds = true,
+      timer = {
+        enable = true,
+        interval = 1500,
+        reset_on_idle = false,
+        reset_on_change = false,
+      },
+      editor = {
+        image = nil,
+        client = "neovim",
+        tooltip = "The Superior Text Editor",
+      },
+      display = {
+        show_time = true,
+        show_repository = true,
+        show_cursor_position = true,
+        swap_fields = true,
+        workspace_blacklist = {},
+      },
+      lsp = {
+        show_problem_count = false,
+        severity = 1,
+        scope = "workspace",
+      },
+      idle = {
+        show_idle = true,
+        timeout = 300000,
+        disable_on_focus = true,
+        text = "Idle",
+        tooltip = "💤",
+      },
+      text = {
+        viewing = "Viewing {}", -- Text to display when viewing a readonly file
+        editing = "Editing code",
+        file_browser = "Browsing files in {}", -- Text to display when browsing files (Empty string to disable)
+        plugin_manager = "Managing plugins in {}", -- Text to display when managing plugins (Empty string to disable)
+        workspace = "In Secret Project",
+      },
+      buttons = {
+        {
+          label = "View repository",
+          url = "https://github.com/chanwoo00106/dotfiles",
+        },
+        {
+          label = "View plugin",
+          url = "https://github.com/vyfor/cord.nvim",
+        },
+      },
+    },
   },
 }
