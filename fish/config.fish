@@ -10,7 +10,7 @@ end
 alias sd "cd ~ && cd (find * -type d | fzf)"
 
 # nvm setup
-__check_nvm
+load_nvm >/dev/stderr
 
 # starship setup
 starship init fish | source
