@@ -1,0 +1,6 @@
+completions
+conf.d
+functions/**
+!functions/__check_nvm.fish
+!functions/nvm.fish
+fish_variables

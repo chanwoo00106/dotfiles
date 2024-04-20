@@ -12,18 +12,18 @@ alias sd "cd ~ && cd (find * -type d | fzf)"
 # nvm setup
 function __check_nvm --on-variable PWD --description 'Do nvm stuff'
     if test -f .nvmrc
-        set node_version (node -v)
-        set nvmrc_node_version (nvm list | grep (cat .nvmrc))
+        set node_version_target (cat .nvmrc)
+        set nvmrc_node_version (nvm list | grep $node_version_target)
 
-        if set -q $nvmrc_node_version
-            nvm install
-        else if string match -q -- "*$node_version" $nvmrc_node_version
-            # already current node version
+        if not test -n "$nvmrc_node_version"
+            # install
+            nvm install $node_version_target
         else
-            nvm use
+            nvm use $node_version_target
         end
     end
 end
+__check_nvm
 
 # starship setup
 starship init fish | source
