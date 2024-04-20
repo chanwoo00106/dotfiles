@@ -2,11 +2,13 @@
 
 **/.DS_Store
 
+!fish
+!fish/config.fish
+!fish/fish_plugins
 !wezterm
 !wezterm/**
 !nvim
 !nvim/**
-!fish/config.fish
 !yabai
 !yabai/**
 !tmux
