@@ -30,16 +30,18 @@ return {
       desc = "toggle test summary sidebar",
     },
   },
-  config = function()
-    require("neotest").setup({
-      adapters = {
-        require("neotest-vitest")({
-          filter_dir = function(name)
-            return name ~= "node_modules"
-          end,
-        }),
-        require("neotest-jest"),
-      },
-    })
+  opts = function(_, opts)
+    table.insert(
+      opts.adapters,
+      require("neotest-jest")({
+        jestCommand = "npm test --",
+        jestConfigFile = "custom.jest.config.js",
+        env = { CI = true },
+        cwd = function()
+          return vim.fn.getcwd()
+        end,
+      })
+    )
+    table.insert(opts.adapters, require("neotest-vitest"))
   end,
 }
