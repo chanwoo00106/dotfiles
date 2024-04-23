@@ -1,8 +1,7 @@
 return {
-  "norcalli/nvim-colorizer.lua",
-  config = function()
-    local colorizer = require("colorizer")
-    colorizer.setup({
+  "NvChad/nvim-colorizer.lua",
+  opts = {
+    filetypes = {
       "css",
       "javascript",
       "lua",
@@ -12,7 +11,8 @@ return {
       "typescript",
       "typescriptreact",
       "javascriptreact",
-    }, {
+    },
+    user_default_options = {
       RGB = true,
       RRGGBB = true,
       names = true,
@@ -22,6 +22,7 @@ return {
       css = true,
       css_fn = true,
       mode = "background",
-    })
-  end,
+      tailwind = true,
+    },
+  },
 }
