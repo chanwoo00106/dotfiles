@@ -28,8 +28,8 @@ map("n", "E", support.diagnostic_goto(true, "ERROR"), { desc = "Next Diagnostic"
 
 map("n", "t", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file tree", noremap = true, silent = true })
 
-vim.keymap.set("n", "f", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-vim.keymap.set("n", "-", [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
-vim.keymap.set("n", "=", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
-vim.keymap.set("n", "<S-k>", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
-vim.keymap.set("n", "<S-j>", [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -
+map("n", "f", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+map("n", "<leader>wh", "<cmd>vertical resize +5<cr>")
+map("n", "<leader>wl", "<cmd>vertical resize -5<cr>")
+map("n", "<leader>wk", "<cmd>horizontal resize +5<cr>")
+map("n", "<leader>wj", "<cmd>horizontal resize -5<cr>")
