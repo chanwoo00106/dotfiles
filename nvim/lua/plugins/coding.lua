@@ -7,7 +7,6 @@ return {
     },
     opts = function(_, opts)
       table.insert(opts.sources, { name = "emoji" })
-      table.insert(opts.sources, { name = "neorg" })
 
       local format_kinds = opts.formatting.format
       opts.formatting.format = function(entry, item)
