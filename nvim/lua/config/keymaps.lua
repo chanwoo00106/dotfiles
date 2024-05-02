@@ -15,12 +15,6 @@ map("n", "sv", ":vsplit<CR><C-w>w", { silent = true })
 
 map("n", "<C-a>", "gg<S-v>G")
 
-map("v", '"', 's""<ESC>P')
-map("v", "'", "s''<ESC>P")
-map("v", "`", "s``<ESC>P")
-map("v", "{", "s{}<ESC>P")
-map("v", "(", "s()<ESC>P")
-map("v", "[", "s[]<ESC>P")
 map("v", "<C-w>", "s<></><ESC>hhi<ENTER><ESC>kpI<TAB><ESC>ki")
 
 map("n", "F", support.diagnostic_goto(true), { desc = "Next Diagnostic", noremap = true, silent = true })
