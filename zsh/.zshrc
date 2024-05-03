@@ -2,6 +2,9 @@
 alias vi="nvim"
 alias ls="eza --icons=always"
 
+# rustup
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # starship
 eval "$(starship init zsh)"
 
@@ -42,7 +45,3 @@ alias cd="z"
 
 # thefuck
 eval $(thefuck --alias)
-
-# disabled zsh history
-SAVEHIST=0
-HISTSIZE=0
