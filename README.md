@@ -4,10 +4,8 @@ chanwoo's dotfiles
 
 ## Used
 
-- Neovim
-  - LazyVim
-- Wezterm
-- Nerd Font
-- fish
-- fzf
-- eza
+```bash
+~ $ touch .zshenv
+~ $ echo "export ZDOTDIR=\"\$HOME/.config/zsh\"" >> .zshenv
+~ $ git clone https://github.com/chanwoo00106/dotfiles.git ~/.config
+```
