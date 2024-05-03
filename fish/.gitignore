@@ -1,7 +1,0 @@
-completions
-conf.d
-functions/**
-!functions/load_nvm.fish
-!functions/nvm_find_nvmrc.fish
-!functions/nvm.fish
-fish_variables
