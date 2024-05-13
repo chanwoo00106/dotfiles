@@ -17,7 +17,7 @@ chanwoo's dotfiles
   - zsh-syntax-highlighting
   - thefuck
   - zoxide
-  - nvm
+  - fnm (fast node manager)
   - brew
   - starship
   - rustup
