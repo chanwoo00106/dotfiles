@@ -15,30 +15,6 @@ return {
             return require("lspconfig.util").root_pattern(".git")(...)
           end,
           single_file_support = false,
-          settings = {
-            typescript = {
-              inlayHints = {
-                includeInlayParameterNameHints = "literal",
-                includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                includeInlayFunctionParameterTypeHints = true,
-                includeInlayVariableTypeHints = false,
-                includeInlayPropertyDeclarationTypeHints = true,
-                includeInlayFunctionLikeReturnTypeHints = true,
-                includeInlayEnumMemberValueHints = true,
-              },
-            },
-            javascript = {
-              inlayHints = {
-                includeInlayParameterNameHints = "all",
-                includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                includeInlayFunctionParameterTypeHints = true,
-                includeInlayVariableTypeHints = true,
-                includeInlayPropertyDeclarationTypeHints = true,
-                includeInlayFunctionLikeReturnTypeHints = true,
-                includeInlayEnumMemberValueHints = true,
-              },
-            },
-          },
         },
         html = {},
         yamlls = {},
@@ -50,6 +26,14 @@ return {
         },
         prismals = {},
         dockerls = {},
+        eslint = {
+          settings = {
+            workingDirectories = { mode = "auto" },
+            experimental = {
+              useFlatConfig = false,
+            },
+          },
+        },
       },
     },
   },
