@@ -1,4 +1,4 @@
-local support = require("config.support")
+local support = require("config.supports")
 
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
@@ -6,6 +6,7 @@ vim.opt.fileencoding = "utf-8"
 
 vim.wo.number = true
 
+vim.api.nvim_set_option("clipboard", "unnamed")
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
