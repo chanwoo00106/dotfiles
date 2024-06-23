@@ -21,4 +21,5 @@ require("lazy").setup("plugins", {
 	install = {
 		colorscheme = { "tokyonight" },
 	},
+	checker = { enabled = true },
 })
