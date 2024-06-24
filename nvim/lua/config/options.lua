@@ -6,7 +6,7 @@ vim.opt.fileencoding = "utf-8"
 
 vim.wo.number = true
 
-vim.api.nvim_set_option("clipboard", "unnamed")
+vim.opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
@@ -33,6 +33,8 @@ vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.opt.relativenumber = false
 vim.opt.swapfile = false
+vim.opt.undofile = true
+vim.opt.undolevels = 10000
 
 local folderList = support.Mysplit(vim.fn.getcwd(), "/")
 vim.opt.titlestring = folderList[#folderList]
