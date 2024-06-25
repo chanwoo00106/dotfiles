@@ -9,6 +9,7 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
+			{ "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
 		},
 		opts = function()
 			local cmp = require("cmp")
@@ -58,11 +59,13 @@ return {
 					{ name = "buffer" },
 				}),
 				formatting = {
-					format = function(_, item)
+					format = function(entry, item)
+						local formatter = require("tailwindcss-colorizer-cmp").formatter
 						if icons[item.kind] then
 							item.kind = icons[item.kind] .. item.kind
 						end
-						return item
+
+						return formatter(entry, item)
 					end,
 				},
 				experimental = {
