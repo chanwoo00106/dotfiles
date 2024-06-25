@@ -2,6 +2,9 @@ return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
 	opts = {
+		messages = {
+			view = "mini",
+		},
 		views = {
 			cmdline_popup = {
 				position = {
