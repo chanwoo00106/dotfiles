@@ -12,7 +12,7 @@ return {
 		vim.cmd([[Neotree close]])
 	end,
 	keys = {
-		{ "<leader>t", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
+		{ "<leader>o", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
 	},
 	opts = {
 		sources = { "filesystem", "buffers", "git_status", "document_symbols" },
