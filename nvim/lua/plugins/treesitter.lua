@@ -7,9 +7,6 @@ return {
 			enable = true,
 		},
 		indent = { enable = true },
-		autotag = {
-			enable = true,
-		},
 		auto_install = true,
 		sync_install = true,
 		ignore_install = {},
