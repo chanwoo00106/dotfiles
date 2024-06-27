@@ -15,8 +15,8 @@ map("n", "<C-z>", ":undo<CR>", opts)
 map("n", "<C-r>", ":redo<CR>", opts)
 map("v", "<C-z>", "")
 
-map("n", "ss", ":split<CR><C-w>w", opts)
-map("n", "sv", ":vsplit<CR><C-w>w", opts)
+map("n", "<leader>ss", ":split<CR><C-w>w", opts)
+map("n", "<leader>sv", ":vsplit<CR><C-w>w", opts)
 
 map("n", "<C-a>", "gg<S-v>G", opts)
 
