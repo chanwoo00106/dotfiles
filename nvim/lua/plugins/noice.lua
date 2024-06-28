@@ -1,7 +1,22 @@
 return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
+	dependencies = {
+		"MunifTanjim/nui.nvim",
+		"rcarriga/nvim-notify",
+	},
 	opts = {
+		routes = {
+			{
+				filter = {
+					event = "notify",
+					find = "No information available",
+				},
+				opts = {
+					skip = true,
+				},
+			},
+		},
 		messages = {
 			view = "mini",
 		},
@@ -35,15 +50,5 @@ return {
 				},
 			},
 		},
-
-		presets = {
-			bottom_search = true,
-			command_palette = true,
-			long_message_to_split = true,
-		},
-	},
-	dependencies = {
-		"MunifTanjim/nui.nvim",
-		"rcarriga/nvim-notify",
 	},
 }
