@@ -4,7 +4,7 @@ local module = {}
 
 function module.apply_to_config(config)
 	config.font = wezterm.font("FiraCode Nerd Font")
-	config.color_scheme = "Tokyo Night Storm"
+	config.color_scheme = "Catppuccin Macchiato"
 	config.window_background_opacity = 0.9
 	config.font_size = 14
 	config.window_padding = {
