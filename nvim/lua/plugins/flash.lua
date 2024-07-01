@@ -9,12 +9,6 @@ return {
 				keys = {},
 			},
 		},
-		label = {
-			rainbow = {
-				enabled = true,
-				shade = 5,
-			},
-		},
 	},
 	enabled = true,
 	keys = {
