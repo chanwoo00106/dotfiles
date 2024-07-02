@@ -3,6 +3,12 @@ local tabbar = require("tabbar")
 
 local config = {}
 
+config.term = "wezterm"
+config.set_environment_variables = {
+	TERMINFO_DIRS = "/home/user/.nix-profile/share/terminfo",
+	WSLENV = "TERMINFO_DIRS",
+}
+
 helpers.apply_to_config(config)
 tabbar.apply_to_config(config)
 
