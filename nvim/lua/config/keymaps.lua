@@ -1,6 +1,9 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+map("v", "J", ":m '>+1<CR>gv=gv", opts)
+map("v", "K", ":m '<-2<CR>gv=gv", opts)
+
 map("v", ">", ">gv", opts)
 map("v", "<", "<gv", opts)
 
@@ -9,6 +12,7 @@ map("n", "<Esc>", ":noh<CR><Esc>", opts)
 map("n", "<leader>l", ":Lazy<cr>", opts)
 
 map("i", "jk", "<ESC>")
+map("i", "Jk", "<ESC>")
 
 map("i", "<C-z>", "")
 map("n", "<C-z>", ":undo<CR>", opts)

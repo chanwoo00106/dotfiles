@@ -14,3 +14,4 @@
 !tmux/**
 !zsh
 !zsh/**
+zsh/.zsh_sessions
