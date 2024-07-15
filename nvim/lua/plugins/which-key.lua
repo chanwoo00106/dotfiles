@@ -1,5 +1,6 @@
 return {
 	"folke/which-key.nvim",
+	dependencies = "echasnovski/mini.icons",
 	event = "VeryLazy",
 	init = function()
 		vim.o.timeout = true
@@ -8,13 +9,13 @@ return {
 	opts = {
 		defaults = {
 			mode = { "n", "v" },
-			["<leader>b"] = { name = "buffer" },
-			["<leader>c"] = { name = "code" },
-			["<leader>g"] = { name = "git, lsp" },
-			["<leader>r"] = { name = "rename" },
-			["<leader>s"] = { name = "buffer, telescope, window" },
-			["<leader>t"] = { name = "test" },
-			["<leader>w"] = { name = "window size" },
+			{ "<leader>b", group = "buffer" },
+			{ "<leader>c", group = "code" },
+			{ "<leader>g", group = "git, lsp" },
+			{ "<leader>r", group = "rename" },
+			{ "<leader>s", group = "buffer, telescope, window" },
+			{ "<leader>t", group = "test" },
+			{ "<leader>w", group = "window size" },
 		},
 	},
 
@@ -22,6 +23,5 @@ return {
 		local whichkey = require("which-key")
 
 		whichkey.setup(opts)
-		whichkey.register(opts.defaults)
 	end,
 }

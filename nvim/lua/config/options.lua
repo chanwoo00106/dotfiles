@@ -31,7 +31,7 @@ vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*" })
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.undolevels = 10000
