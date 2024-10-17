@@ -5,16 +5,12 @@ chanwoo's dotfiles
 ## Used
 
 ```bash
-~ $ touch .zshenv
-~ $ echo "export ZDOTDIR=\"\$HOME/.config/zsh\"" >> .zshenv
 ~ $ git clone https://github.com/chanwoo00106/dotfiles.git ~/.config
 ```
 
 ## dependency
 
-- zsh
-  - zsh-autosuggestions
-  - zsh-syntax-highlighting
+- fish
   - thefuck
   - zoxide
   - fnm (fast node manager)
