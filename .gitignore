@@ -14,6 +14,5 @@
 !skhd/**
 !tmux
 !tmux/**
-!zsh
-!zsh/**
-zsh/.zsh_sessions
+!sketchybar
+!sketchybar/**
