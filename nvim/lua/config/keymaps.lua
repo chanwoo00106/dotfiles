@@ -30,3 +30,9 @@ map("n", "<leader>wh", "<cmd>vertical resize +5<cr>", opts)
 map("n", "<leader>wl", "<cmd>vertical resize -5<cr>", opts)
 map("n", "<leader>wk", "<cmd>horizontal resize +5<cr>", opts)
 map("n", "<leader>wj", "<cmd>horizontal resize -5<cr>", opts)
+
+-- debug keymaps
+map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>",
+  { desc = "Add breakpoint at line", noremap = true, silent = true })
+map("n", "<leader>dr", "<cmd> DapContinue <CR>",
+  { desc = "Start or continue the debugger", noremap = true, silent = true })
