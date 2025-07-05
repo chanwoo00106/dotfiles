@@ -6,7 +6,10 @@ return {
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     "mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
+    {
+      "williamboman/mason-lspconfig.nvim",
+      version = "1.32.0"
+    }
   },
   opts = {
     servers = {
@@ -34,10 +37,6 @@ return {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
       callback = function(ev)
         local opts = { buffer = ev.buf, silent = true }
-
-        opts.desc = "See available code actions"
-        keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
-
         opts.desc = "Smart rename"
         keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
@@ -45,7 +44,7 @@ return {
         keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
         opts.desc = "Go to next diagnostic"
-        keymap.set("n", "F", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+        keymap.set("n", "F", function() vim.diagnostic.jump({ count = 1, float = true }) end, opts) -- jump to next diagnostic in buffer
 
         opts.desc = "Show documentation for what is under cursor"
         keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
@@ -53,6 +52,22 @@ return {
         opts.desc = "Restart LSP"
         keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
       end,
+    })
+
+    lspconfig.tailwindcss.setup({
+      settings = {
+        tailwindCSS = {
+          experimental = {
+            classRegex = {
+              ["cva\\(([^)]*)\\)"] = "[\"'`]([^\"'`]*).*?[\"'`]",
+            }
+          },
+        }
+      },
+      filetypes = {
+        "html", "css", "scss", "javascript", "javascriptreact",
+        "typescript", "typescriptreact", "vue", "svelte", "heex"
+      },
     })
 
     mason_lspconfig.setup_handlers({
@@ -69,12 +84,12 @@ return {
         })
       end,
 
-      -- ["ts_ls"] = function()
-      --   lspconfig["ts_ls"].setup({
-      --     capabilities = capabilities,
-      --     root_dir = vim.fn.getcwd(),
-      --   })
-      -- end,
+      ["ts_ls"] = function()
+        lspconfig["ts_ls"].setup({
+          capabilities = capabilities,
+          root_dir = vim.fn.getcwd(),
+        })
+      end,
 
       ["jsonls"] = function()
         lspconfig["jsonls"].setup({
