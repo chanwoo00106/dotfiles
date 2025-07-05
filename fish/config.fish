@@ -19,6 +19,9 @@ thefuck --alias | source
 zoxide init fish | source
 alias cd=z
 
+# neovide
+alias vim "/Applications/Neovide.app/Contents/MacOS/neovide"
+
 # yazi
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -30,3 +33,10 @@ function y
 end
 
 set -g -x EDITOR nvim
+
+# pnpm
+set -gx PNPM_HOME "/Users/chan/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
