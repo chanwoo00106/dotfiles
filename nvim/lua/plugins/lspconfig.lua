@@ -1,5 +1,3 @@
-local icons = require("config.icons")
-
 return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
@@ -34,15 +32,6 @@ return {
 			end,
 		})
 
-		vim.lsp.config("lua_ls", {
-			settings = {
-				Lua = {
-					runtime = { version = "LuaJIT" },
-					diagnostics = { globals = { "vim", "require" } },
-				},
-			},
-		})
-
 		vim.lsp.config("tailwindcss", {
 			settings = {
 				tailwindCSS = {
@@ -68,7 +57,6 @@ return {
 		})
 
 		vim.lsp.config("jsonls", {
-
 			settings = {
 				json = {
 					schemas = {

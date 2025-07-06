@@ -31,3 +31,5 @@ opts.desc = "Go to next diagnostic"
 keymap.set("n", "F", function()
 	vim.diagnostic.jump({ count = 1, float = true })
 end, opts)
+
+return {}
