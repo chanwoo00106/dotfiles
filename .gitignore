@@ -4,6 +4,7 @@
 
 !fish
 !fish/**
+fish/conf.d/gemini_api_key.fish
 !wezterm
 !wezterm/**
 !nvim

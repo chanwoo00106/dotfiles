@@ -19,9 +19,6 @@ thefuck --alias | source
 zoxide init fish | source
 alias cd=z
 
-# neovide
-alias vim "/Applications/Neovide.app/Contents/MacOS/neovide"
-
 # yazi
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
