@@ -14,12 +14,13 @@ return {
 		providers = {
 			gemini = {
 				endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
-				model = "gemini-1.5-flash",
+				model = "gemini-2.5-flash",
 				timeout = 30000,
 				temperature = 0,
 				max_tokens = 8192,
 			},
 		},
+		system_prompt = "You are a helpful AI assistant. Always respond in Korean.",
 	},
 	dependencies = {
 		"nvim-lua/plenary.nvim",
