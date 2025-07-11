@@ -27,12 +27,11 @@ return {
 
 		vim.diagnostic.config({
 			signs = {
-				active = true,
 				text = {
-					[vim.diagnostic.severity.ERROR] = " ", -- Example: Error icon
-					[vim.diagnostic.severity.WARN] = " ", -- Example: Warning icon
-					[vim.diagnostic.severity.HINT] = " ", -- Example: Hint icon
-					[vim.diagnostic.severity.INFO] = "", -- Example: Info icon
+					[vim.diagnostic.severity.ERROR] = " ",
+					[vim.diagnostic.severity.WARN] = " ",
+					[vim.diagnostic.severity.HINT] = " ",
+					[vim.diagnostic.severity.INFO] = "",
 				},
 			},
 			underline = true,
