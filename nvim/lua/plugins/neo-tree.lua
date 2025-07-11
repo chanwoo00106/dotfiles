@@ -51,6 +51,7 @@ return {
 		config = function()
 			require("window-picker").setup({
 				hint = "floating-big-letter",
+				selection_chars = "JFDKSLA;CMRUEIWOQP",
 			})
 		end,
 	},
