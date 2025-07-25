@@ -20,7 +20,7 @@ return {
 				max_tokens = 8192,
 			},
 		},
-		system_prompt = "You are a helpful AI assistant. Always respond in Korean.",
+		system_prompt = "You are a helpful AI assistant. Always respond in Korean. Please try to avoid using `pnpm dev`.",
 	},
 	dependencies = {
 		"nvim-lua/plenary.nvim",

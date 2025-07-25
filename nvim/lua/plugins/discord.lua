@@ -14,7 +14,7 @@ return {
 			editor = {
 				image = nil,
 				client = "neovim",
-				tooltip = "The Superior Text Editor",
+				tooltip = "The best text editor in the world",
 			},
 			display = {
 				show_time = true,
@@ -36,20 +36,16 @@ return {
 				tooltip = "💤",
 			},
 			text = {
-				viewing = "Viewing {}", -- Text to display when viewing a readonly file
-				editing = "Editing code",
-				file_browser = "Browsing files in {}", -- Text to display when browsing files (Empty string to disable)
-				plugin_manager = "Managing plugins in {}", -- Text to display when managing plugins (Empty string to disable)
-				workspace = "In Secret Project",
+				viewing = "Viewing codes", -- Text to display when viewing a readonly file
+				editing = "Editing codes",
+				file_browser = "Browsing files", -- Text to display when browsing files (Empty string to disable)
+				plugin_manager = "Managing plugins", -- Text to display when managing plugins (Empty string to disable)
+				workspace = "In secret project",
 			},
 			buttons = {
 				{
-					label = "View repository",
+					label = "View dotfiles",
 					url = "https://github.com/chanwoo00106/dotfiles",
-				},
-				{
-					label = "View plugin",
-					url = "https://github.com/vyfor/cord.nvim",
 				},
 			},
 		},
