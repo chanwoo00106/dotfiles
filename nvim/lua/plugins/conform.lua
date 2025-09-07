@@ -11,6 +11,7 @@ return {
 			css = { "prettierd" },
 			json = { "prettierd" },
 			html = { "prettierd" },
+			python = { "isort" },
 		},
 		format_on_save = {
 			lsp_fallback = true,
