@@ -6,6 +6,8 @@ yabai -m config top_padding                8              \
                 right_padding              8              \
                 window_gap                 10
 
+yabai -m config mouse_follows_focus on
+
 yabai -m rule --add app="^(계산기|Software Update|VLC|IINA|System Preferences|시스템 설정|zoom.us|Photo Booth|App Store|카카오톡|AppCleaner)$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^(Safari|Chrome|Firefox|Min)$" manage=off
