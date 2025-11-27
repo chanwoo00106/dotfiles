@@ -12,9 +12,6 @@ alias sd "cd ~ && cd (find * -type d | fzf)"
 # starship setup
 starship init fish | source
 
-# the fuck setup
-thefuck --alias | source
-
 # zoxide
 zoxide init fish | source
 alias cd=z
